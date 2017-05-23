@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Koodinäyttö</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="animate.css" />
+    </head>
+    <body>
+        <section class="intro">
+            <div class="inner">
+                <div class="sisalto">
+                    <h1>Koodinäyttö</h1>
+                    <a class="nappi" href="index.html#teksti">Hyppää tekstiin 1</a>
+                    <a class="nappi" href="index.html#toinen_teksti">Hyppää tekstiin 2</a>
+                </div>
+            </div>
+        </section>
+        <button onclick="topFunction()" class="nappiYlos" title="Mene sivun yläosaan">Ylös</button>
+        <div a id="teksti" class="teksti2">
+        <h2>Teksti 1</h2>
+        <p>Lorem ipsum dolor sit amet, at pri atqui electram, 
+            ut nibh ferri mundi eam, labores praesent duo an.
+             Pri vide civibus laboramus et, mutat legimus periculis ius in. 
+             In inermis euripidis eum, regione gubergren hendrerit quo et, 
+             tota neglegentur et quo. Ad homero noluisse signiferumque usu, 
+             id soluta eruditi apeirian duo. Sed eu quaeque sapientem persequeris. 
+             Ad nullam commune appareat mel, ne eius adipiscing referrentur nec.
+             Lorem ipsum dolor sit amet, at pri atqui electram, 
+            ut nibh ferri mundi eam, labores praesent duo an.
+             Pri vide civibus laboramus et, mutat legimus periculis ius in. 
+             In inermis euripidis eum, regione gubergren hendrerit quo et, 
+             tota neglegentur et quo. Ad homero noluisse signiferumque usu, 
+             id soluta eruditi apeirian duo. Sed eu quaeque sapientem persequeris. 
+             Ad nullam commune appareat mel, ne eius adipiscing referrentur nec.</p>
+        </div>     
+        <div class="teksti2">
+        <h2>Lorem ipsum dolor sit amet, at pri atqui electram</h2>        
+        <p>Lorem ipsum dolor sit amet, at pri atqui electram, 
+            ut nibh ferri mundi eam, labores praesent duo an.
+             Pri vide civibus laboramus et, mutat legimus periculis ius in. 
+             In inermis euripidis eum, regione gubergren hendrerit quo et, 
+             tota neglegentur et quo. Ad homero noluisse signiferumque usu, 
+             id soluta eruditi apeirian duo. Sed eu quaeque sapientem persequeris. 
+             Ad nullam commune appareat mel, ne eius adipiscing referrentur nec.
+             Lorem ipsum dolor sit amet, at pri atqui electram, 
+            ut nibh ferri mundi eam, labores praesent duo an.
+             Pri vide civibus laboramus et, mutat legimus periculis ius in. 
+             In inermis euripidis eum, regione gubergren hendrerit quo et, 
+             tota neglegentur et quo. Ad homero noluisse signiferumque usu, 
+             id soluta eruditi apeirian duo. Sed eu quaeque sapientem persequeris. 
+             Ad nullam commune appareat mel, ne eius adipiscing referrentur nec.</p>
+        </div>     
+         <div id="toinen_teksti" class="teksti2">
+        <h2>Teksti 2</h2>   
+         <p>Lorem ipsum dolor sit amet, at pri atqui electram, 
+            ut nibh ferri mundi eam, labores praesent duo an.
+             Pri vide civibus laboramus et, mutat legimus periculis ius in. 
+             In inermis euripidis eum, regione gubergren hendrerit quo et, 
+             tota neglegentur et quo. Ad homero noluisse signiferumque usu, 
+             id soluta eruditi apeirian duo. Sed eu quaeque sapientem persequeris. 
+             Ad nullam commune appareat mel, ne eius adipiscing referrentur nec.
+             Lorem ipsum dolor sit amet, at pri atqui electram, 
+            ut nibh ferri mundi eam, labores praesent duo an.
+             Pri vide civibus laboramus et, mutat legimus periculis ius in. 
+             In inermis euripidis eum, regione gubergren hendrerit quo et, 
+             tota neglegentur et quo. Ad homero noluisse signiferumque usu, 
+             id soluta eruditi apeirian duo. Sed eu quaeque sapientem persequeris. 
+             Ad nullam commune appareat mel, ne eius adipiscing referrentur nec.</p>
+        </div>
+        <div class="teksti2">
+        <h2>Lorem ipsum dolor sit amet, at pri atqui electram</h2>   
+         <p>Lorem ipsum dolor sit amet, at pri atqui electram, 
+            ut nibh ferri mundi eam, labores praesent duo an.
+             Pri vide civibus laboramus et, mutat legimus periculis ius in. 
+             In inermis euripidis eum, regione gubergren hendrerit quo et, 
+             tota neglegentur et quo. Ad homero noluisse signiferumque usu, 
+             id soluta eruditi apeirian duo. Sed eu quaeque sapientem persequeris. 
+             Ad nullam commune appareat mel, ne eius adipiscing referrentur nec.
+             Lorem ipsum dolor sit amet, at pri atqui electram, 
+            ut nibh ferri mundi eam, labores praesent duo an.
+             Pri vide civibus laboramus et, mutat legimus periculis ius in. 
+             In inermis euripidis eum, regione gubergren hendrerit quo et, 
+             tota neglegentur et quo. Ad homero noluisse signiferumque usu, 
+             id soluta eruditi apeirian duo. Sed eu quaeque sapientem persequeris. 
+             Ad nullam commune appareat mel, ne eius adipiscing referrentur nec.</p>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+        <script src="js/viewportchecker.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function() {
+	        jQuery('.teksti2').addClass("hidden").viewportChecker({
+	            classToAdd: 'visible animated bounceInUp', 
+	            offset: 100    
+	        });   
+});            
+</script>
+
+<script>
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        document.getElementById("nappiYlos").style.display = "block";
+    } else {
+        document.getElementById("nappiYlos").style.display = "none";
+    }
+}
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>                     
+    </body>
+</html>
